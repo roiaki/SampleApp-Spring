@@ -5,6 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.Tweet;
 
+
+//import com.example.demo.model.Tweet;
+
 @Repository
 public interface TweetRepository extends JpaRepository<Tweet, Long>{
 
