@@ -16,20 +16,20 @@
           th:object="${tweet}"
           method="post">
           <div class="form-group">
-        	<label for="content">ツイート</label>
-        	<input class="form-control" type="text" th:field="*{content}">
+            <label for="content">ツイート</label>
+            <input class="form-control" type="text" th:field="*{content}">
 
-        	<button class="btn btn-primary col-2 mt-5">
-			  <i class="bi bi-pencil-square"></i>
+            <button class="btn btn-primary col-2 mt-5">
+              <i class="bi bi-pencil-square"></i>
               <span class="text">保存</span>
-			</button>
-		</div>
+           </button>
+        </div>
         </form>
         <h4 class="border-bottom my-3">ツイート一覧</h4>
-  		  <div th:each="tweet : ${tweets}">
-    	    <div>[[${tweet.id}]] - [[${tweet.content}]]</div>
-  		  </div>
-	  </div>
+          <div th:each="tweet : ${tweets}">
+            <div>[[${tweet.id}]] - [[${tweet.content}]]</div>
+          </div>
+      </div>
     </div>
   </div>
 
