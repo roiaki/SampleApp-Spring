@@ -26,9 +26,9 @@
         </div>
         </form>
         <h4 class="border-bottom my-3">ツイート一覧</h4>
-          <div th:each="tweet : ${tweets}">
+        <div th:each="tweet : ${tweets}">
             <div>[[${tweet.id}]] - [[${tweet.content}]]</div>
-          </div>
+        </div>
       </div>
     </div>
   </div>
