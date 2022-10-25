@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
 
+import java.security.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,5 +25,10 @@ public class Tweet {
     @NotBlank
     @Size(max = 140)
     private String content;
+
+
+    private Timestamp created_at;
+
+    private Timestamp updated_at;
 
 }

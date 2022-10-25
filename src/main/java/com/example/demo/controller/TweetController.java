@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -25,7 +26,8 @@ public class TweetController {
 
     @GetMapping("/")
     public String showList(@ModelAttribute Tweet tweet, Model model) {
-	model.addAttribute("tweets", repository.findAll());
+	model.addAttribute("tweets",
+		repository.findAll(Sort.by(Sort.Direction.DESC, "id")));
 	return "index";
     }
 

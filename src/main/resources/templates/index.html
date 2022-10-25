@@ -27,8 +27,19 @@
         </form>
         <h4 class="border-bottom my-3">ツイート一覧</h4>
         <div th:each="tweet : ${tweets}">
-            <div>[[${tweet.id}]] - [[${tweet.content}]]</div>
+          <div>[[${tweet.id}]] - [[${tweet.created_at}]]</div>
         </div>
+
+        <table class="table table-hover">
+          <tr th:each="tweet : ${tweets}"
+            th:object="${tweet}">
+            <td th:text="*{id}"></td>
+            <td th:text="*{content}"></td>
+            <td th:text="*{created_at}"></td>
+
+
+          </tr>
+        </table>
       </div>
     </div>
   </div>
