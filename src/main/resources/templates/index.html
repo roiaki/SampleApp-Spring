@@ -36,6 +36,10 @@
             <td th:text="*{id}"></td>
             <td th:text="*{content}"></td>
             <td th:text="*{created_at}"></td>
+            <td>
+              <a th:href="@{edit/{id}(id=*{id})}" class="btn btn-primary">編集</a>
+            </td>
+
 
 
           </tr>
