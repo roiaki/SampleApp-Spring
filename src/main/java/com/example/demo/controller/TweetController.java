@@ -84,5 +84,14 @@ public class TweetController {
 
 	return "index";
     }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Long id, Model model) {
+
+	repository.deleteById(id);
+
+	return "redirect:/";
+    }
+
 }
 
